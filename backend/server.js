@@ -1,11 +1,30 @@
-const express = require('express')
+import express from "express";
 
-const app = express()
+import cookieParser from "cookie-parser";
 
-const PORT = process.env.PORT || 5000
+import dotenv from "dotenv";
 
-app.get("/",(req,res) => {
-  res.send('Hello World')
-})
+import authRoutes from "../backend/routes/auth.routes.js";
+import messageRoutes from "../backend/routes/message.routes.js";
+import connectToMongoDB from "./db/connectToMongoDB.js";
 
-app.listen(5000,() => console.log('Server Running On Port 5000'))
+const app = express();
+
+const PORT = process.env.PORT || 5000;
+
+dotenv.config();
+
+app.use(express.json());
+app.use(cookieParser());
+
+app.use("/api/auth", authRoutes);
+app.use("/api/messages", messageRoutes);
+
+// app.get("/",(req,res) => {
+//   res.send('Hello World')
+// })
+
+app.listen(PORT, () => {
+  connectToMongoDB();
+  console.log(`Server Running On Port ${PORT}`);
+});
