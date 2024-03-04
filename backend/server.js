@@ -30,8 +30,6 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
 });
 
-console.log(dotenv.config());
-
 server.listen(PORT, () => {
   connectToMongoDB();
   console.log(`Server Running On Port ${PORT}`);
