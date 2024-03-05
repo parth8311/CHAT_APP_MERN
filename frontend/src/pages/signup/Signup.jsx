@@ -25,7 +25,7 @@ const Signup = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
-      <div className="h-full w-full bg-gray-400 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10">
+      <div className="h-full w-full bg-gray-400 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-10">
         <h1 className="text-3xl font-semibold text-center text-gray-300">
           SignUp
           <span className="text-blue-500">ChatApp</span>
@@ -33,11 +33,13 @@ const Signup = () => {
         <form onSubmit={handleSubmit}>
           <div>
             <label className="label p-2">
-              <span className="text-base label-text text-white">Full Name</span>
+              <span className="text-base label-text text-white font-semibold">
+                Full Name
+              </span>
             </label>
             <input
               type="text"
-              placeholder="Parth"
+              placeholder="Enter Your Full Name"
               className="w-full input input-bordered h-10"
               value={inputs.fullName}
               onChange={(e) =>
@@ -47,11 +49,13 @@ const Signup = () => {
           </div>
           <div>
             <label className="label p-2">
-              <span className="text-base label-text text-white">Username</span>
+              <span className="text-base label-text text-white font-semibold">
+                Username
+              </span>
             </label>
             <input
               type="text"
-              placeholder="Parth"
+              placeholder="Enter Your User Name"
               className="w-full input input-bordered h-10"
               value={inputs.username}
               onChange={(e) =>
@@ -61,11 +65,13 @@ const Signup = () => {
           </div>
           <div>
             <label className="label">
-              <span className="text-base label-text text-white">Password</span>
+              <span className="text-base label-text text-white font-semibold">
+                Password
+              </span>
             </label>
             <input
               type="password"
-              placeholder="Enter Password"
+              placeholder="Enter Your Password"
               className="w-full input input-bordered h-10"
               value={inputs.password}
               onChange={(e) =>
@@ -75,13 +81,13 @@ const Signup = () => {
           </div>
           <div>
             <label className="label">
-              <span className="text-base label-text text-white">
+              <span className="text-base label-text text-white font-semibold">
                 Confirm Password
               </span>
             </label>
             <input
               type="password"
-              placeholder="Confirm Password"
+              placeholder="Enter Your Confirm Password"
               className="w-full input input-bordered h-10"
               value={inputs.confirmPassword}
               onChange={(e) =>
@@ -89,15 +95,21 @@ const Signup = () => {
               }
             />
           </div>
-
-          <GenderCheckbox
-            onCheckBoxChange={handleCheckBoxChange}
-            selectedGender={inputs.gender}
-          />
+          <div>
+            <label className="label">
+              <span className="text-base label-text text-white font-semibold">
+                Gender :
+              </span>
+            </label>
+            <GenderCheckbox
+              onCheckBoxChange={handleCheckBoxChange}
+              selectedGender={inputs.gender}
+            />
+          </div>
 
           <Link
             to="/login"
-            className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block text-white"
+            className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block text-white font-semibold mx-1"
           >
             Already have an account?
           </Link>
@@ -107,7 +119,7 @@ const Signup = () => {
               disabled={loading}
             >
               {loading ? (
-                <span className="loading loading-spinner"></span>
+                <span className="loading loading-spinner font-semibold"></span>
               ) : (
                 "Sign Up"
               )}
