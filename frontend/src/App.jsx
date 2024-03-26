@@ -9,6 +9,9 @@ import "./app.scss";
 import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
 import Parallax from "./components/parallax/Parallax";
+import Services from "./components/services/Services";
+import Portfolio from "./components/portfolio/Portfolio";
+import Contact from "./components/contact/Contact";
 
 const App = () => {
   const { authUser } = useAuthContext();
@@ -21,7 +24,12 @@ const App = () => {
       <section className="text-white" id="Services">
         <Parallax type="services" />
       </section>
-      <section className="text-white" id="Contact"></section>
+      <section>{/* <Services /> */}</section>
+      <section id="Portfolio">{/* <Parallax type="portfolio" /> */}</section>
+      {/* <Portfolio /> */}
+      <section className="text-white" id="Contact">
+        <Contact />
+      </section>
       <section className="text-white" id="About"></section>
       {/* // <div className="p-4 h-screen flex items-center justify-center"> */}
       {/* <Routes>
