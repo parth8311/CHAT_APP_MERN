@@ -12,11 +12,13 @@ import Parallax from "./components/parallax/Parallax";
 import Services from "./components/services/Services";
 import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
+import Cursor from "./components/cursor/Cursor";
 
 const App = () => {
   const { authUser } = useAuthContext();
   return (
     <div>
+      <Cursor />
       <section className="text-white" id="HomePage">
         <Navbar />
         <Hero />
@@ -24,13 +26,17 @@ const App = () => {
       <section className="text-white" id="Services">
         <Parallax type="services" />
       </section>
-      <section>{/* <Services /> */}</section>
-      <section id="Portfolio">{/* <Parallax type="portfolio" /> */}</section>
+      {/* <section>
+        <Services />
+      </section> */}
+      {/* <section id="Portfolio">
+        <Parallax type="portfolio" />
+      </section> */}
       {/* <Portfolio /> */}
       <section className="text-white" id="Contact">
         <Contact />
       </section>
-      <section className="text-white" id="About"></section>
+      {/* <section className="text-white" id="About"></section> */}
       {/* // <div className="p-4 h-screen flex items-center justify-center"> */}
       {/* <Routes>
         <Route
@@ -47,8 +53,7 @@ const App = () => {
         />
         </div>
       </Routes> */}
-      <Toaster />
-      //{" "}
+      {/* <Toaster /> */}
     </div>
   );
 };
