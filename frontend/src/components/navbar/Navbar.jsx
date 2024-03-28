@@ -17,13 +17,13 @@ const Navbar = () => {
           Chat App
         </motion.span>
         <div className="social">
-          <a href="#">
+          <a href="https://www.facebook.com/">
             <img src="/facebook.png" alt="" />
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/">
             <img src="/instagram.png" alt="" />
           </a>
-          <a href="#">
+          <a href="https://www.youtube.com/">
             <img src="/youtube.png" alt="" />
           </a>
         </div>
