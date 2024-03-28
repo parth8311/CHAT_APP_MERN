@@ -27,12 +27,12 @@ const Navbar = () => {
             <img src="/youtube.png" alt="" />
           </a>
         </div>
-        <div className="button mx-6 h-screen flex items-center justify-center">
+        {/* <div className="button mx-6 h-screen flex items-center justify-center">
           <button>Login</button>
-        </div>
-        <div className="button h-screen flex items-center justify-center">
+        </div> */}
+        {/* <div className="button h-screen flex items-center justify-center">
           <button>SignUp</button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
