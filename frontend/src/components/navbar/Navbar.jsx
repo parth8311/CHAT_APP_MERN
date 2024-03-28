@@ -27,31 +27,11 @@ const Navbar = () => {
             <img src="/youtube.png" alt="" />
           </a>
         </div>
-        <div className="p-4 mx-6 h-screen flex items-center justify-center">
-          <button
-            style={{
-              width: 100,
-              height: 50,
-              borderRadius: 50,
-              backgroundColor: "orange",
-              color: "black",
-            }}
-          >
-            Login
-          </button>
+        <div className="button mx-6 h-screen flex items-center justify-center">
+          <button>Login</button>
         </div>
-        <div className="h-screen flex items-center justify-center">
-          <button
-            style={{
-              width: 100,
-              height: 50,
-              borderRadius: 50,
-              backgroundColor: "orange",
-              color: "black",
-            }}
-          >
-            SignUp
-          </button>
+        <div className="button h-screen flex items-center justify-center">
+          <button>SignUp</button>
         </div>
       </div>
     </div>
